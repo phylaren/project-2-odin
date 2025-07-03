@@ -9,12 +9,22 @@
 
 * {
     font-family: var(--main-font);
+    margin: 0;
+    padding: 0;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    margin: 0;
+    justify-content: flex-end;
+}
+
+header, footer {
+    padding: 0% 10%;
+}
+
+button:hover{
+    cursor: pointer;
 }
 
 /* HEADER */
@@ -22,16 +32,12 @@ header {
     display: flex;
     background-color: var(--main-color);
     justify-content: space-between;
-    padding: 20px;
-    margin: 0;
     align-items: center;
 }
 
 ul {
     list-style: none;
     display: flex;
-    padding: 0;
-    margin: 0;
     gap: 16px;
 }
 
@@ -51,11 +57,14 @@ a {
 .header-extension {
     background-color: var(--main-color);
     display: flex;
-    padding: 20px;
+    padding: 6% 15%;
+    gap: 16px;
 }
 
 .header-extension h2 {
     color: white;
+    font-weight: bolder;
+    font-size: xx-large;
 }
 
 .header-extension p {
@@ -64,8 +73,13 @@ a {
 }
 
 .header-extension img {
-    border: 2px solid black;
     padding: 10px;
+    object-fit: scale-down;
+    flex: 1 1 0;
+}
+
+.header-extension-text {
+    flex: 4 1 0;
 }
 
 .header-extension button {
@@ -73,27 +87,111 @@ a {
     color: white;
     border: 0px;
     border-radius: 5px;
-    padding: 5px;
+    margin-top: 5px;
+    padding: 5px 25px;
 }
 
 /* CARDS CONTAINER */
 
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 20%;
+}
+
+.cards-container h2{
+    font-weight: 900;
+    font-size: 36px;
+    text-align: center;
+}
+.cards {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    gap: 32px;
+    
+}
+
+.card {
+    flex: 1 1 25%;
+
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    color: var(--main-color);
+    font-style: italic light;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+.card img {
+    align-self: center;
+    width: 100%;
+    flex: 1 1 auto;
+    border-radius: 5px;
+    border: 2px solid var(--button-color);
+}
+
+.card p {
+    width: 100%;
+    flex: 1 1 auto;
+}
 
 
 /* QUOTE CONTAINER */
 .quote-container {
     background-color: var(--quote-color);
+    padding: 5% 20%;
+    font-weight: 100;
+    font-style: italic light;
+    color: var(--main-color);
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+}
+
+.author {
+    font-style: oblique;
+    font-weight: 600;
+    align-self: flex-end;
 }
 
 
 /* SIGN UP CONTAINER */
 .sign-up-container {
     background-color: var(--button-color);
+    margin: 5% 20%;
+    padding: 3%;
+    border-radius: 5px;
+    color: white;
+    font-size: small;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.sign-up-container button, .sign-up-text {
+    flex: 1 1 auto;
+}
+
+.sign-up-container button{
+    background-color: var(--button-color);
+    border: 2px solid white;
+    color: white;
+    flex: 0 0 auto;
+    padding: 5px 25px;
+    border-radius: 5px;
 }
 
 /* FOOTER */
 footer {
-    background-color: #1f2937;
+    background-color: var(--main-color);
     color: white;
+    padding: 1% 10%;
+    text-align: center;
 }
 
